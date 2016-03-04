@@ -13,9 +13,10 @@ script/bootstrap
 ## What's Happen?
 
 1. Link dotfiles
-2. Run all `install.sh`
-3. Install packages via homebrew
-4. Setup Mac OS X default settings
+2. Setup Mac OS X default settings
+3. Install homebrew
+4. Install packages via homebrew
+5. Run all `install.sh`
 
 ## zshrc
 
