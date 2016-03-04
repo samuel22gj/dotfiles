@@ -2,12 +2,26 @@
 
 Your dotfiles are how you personalize your system. These are mine.
 
-I was a little tired of having long alias files and everything strewn about
-(which is extremely common on other dotfiles projects, too). That led to this
-project being much more topic-centric. I realized I could split a lot of things
-up into the main areas I used (Ruby, git, system libraries, and so on), so I
-structured the project accordingly.
+## Install
 
+```sh
+git clone https://github.com/samuel22gj/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+script/bootstrap
+```
+
+## What's Happen?
+
+1. Link dotfiles
+2. Run all `install.sh`
+3. Install packages via homebrew
+4. Setup Mac OS X default settings
+
+## zshrc
+
+1. load all `path.zsh`
+2. load all `*zsh` exclude `path.zsh` and `completion.zsh`
+3. load all `completion.zsh`
 
 ## Topical
 
@@ -35,28 +49,8 @@ There's a few special files in the hierarchy.
   but still keep those autoloaded files in your home directory. These get
   symlinked in when you run `script/bootstrap`.
 
-## Install
-
-Run this:
-
-```sh
-git clone https://github.com/samuel22gj/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-script/bootstrap
-```
-
-This will symlink the appropriate files in `.dotfiles` to your home directory.
-Everything is configured and tweaked within `~/.dotfiles`.
-
-The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
-which sets up a few paths that'll be different on your particular machine.
-
-`dot` is a simple script that installs some dependencies, sets sane OS X
-defaults, and so on. Tweak this script, and occasionally run `dot` from
-time to time to keep your environment fresh and up-to-date. You can find
-this script in `bin/`.
-
 ## Thanks
 
-I forked [Zach Holman](http://github.com/holman)'s excellent [dotfiles](http://github.com/holman/dotfiles).
-
+Inspired by [Zach Holman](http://github.com/holman)'s excellent [dotfiles](http://github.com/holman/dotfiles).
+Inspired by [ZAmo Wu](http://github.com/holman)'s excellent [dotfiles](https://github.com/amowu/dotfiles).
+Inspired by [Mathias Bynens](http://github.com/holman)'s excellent [dotfiles](https://github.com/mathiasbynens/dotfiles).
