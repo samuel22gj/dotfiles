@@ -119,14 +119,6 @@ install_homebrew () {
   fi
 }
 
-install_ohmyzsh () {
-  if [ ! -d ~/.oh-my-zsh ]
-  then
-    info '  Installing oh-my-zsh'
-    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-  fi
-}
-
 install_dotfiles () {
   info '  Installing dotfiles'
 
@@ -140,7 +132,6 @@ install_dotfiles () {
 }
 
 install_homebrew
-install_ohmyzsh
 install_dotfiles
 
 # If we're on a Mac, let's install and setup homebrew.
