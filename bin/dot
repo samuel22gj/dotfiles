@@ -8,16 +8,10 @@ set -e
 
 export DOTFILES=$HOME/.dotfiles
 
-# Set OS X defaults
-$DOTFILES/osx/set-defaults.sh
-
-# Install homebrew
-$DOTFILES/homebrew/install.sh
-
-# Update homebrew
-echo "› brew update"
-brew update
-
-# Install software
-echo "› $DOTFILES/script/install"
-$DOTFILES/script/install
+if [ "$(uname -s)" == "Darwin" ]
+then
+  source $DOTFILES/script/dot-osx
+elif [ "$(uname -s)" == "Linux" ]
+then
+  source $DOTFILES/script/dot-linux
+fi

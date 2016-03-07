@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -e
+
+# Check OS
+if [ "$(uname -s)" != "Darwin" ]
+then
+  exit
+fi
+
+export DOTFILES=$HOME/.dotfiles
+
+# Set OS X defaults
+$DOTFILES/osx/set-defaults.sh
+
+# Install homebrew
+$DOTFILES/homebrew/install.sh
+
+# Update homebrew
+echo "› brew update"
+brew update
+
+cd "$(dirname $0)"/..
+
+# Run Homebrew through the Brewfile
+echo "› brew bundle"
+brew bundle
+
+# Install software
+echo "› $DOTFILES/script/install"
+$DOTFILES/script/install
