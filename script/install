@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
-set -e
-
+#
 # install
 #
 # Run all dotfiles installers.
+
+set -e
 
 cd "$(dirname $0)"/..
 

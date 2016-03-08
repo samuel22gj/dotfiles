@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
+
 set -e
+
+export DOTFILES=$HOME/.dotfiles
+
+# Include customize printf functions
+source $DOTFILES/script/printf
 
 # Check OS
 if [ "$(uname -s)" != "Darwin" ]
 then
   exit
 fi
-
-export DOTFILES=$HOME/.dotfiles
 
 # Set OS X defaults
 $DOTFILES/osx/set-defaults.sh
@@ -16,15 +20,14 @@ $DOTFILES/osx/set-defaults.sh
 $DOTFILES/homebrew/install.sh
 
 # Update homebrew
-echo "› brew update"
+info "Running brew update"
 brew update
 
 cd "$(dirname $0)"/..
 
 # Run Homebrew through the Brewfile
-echo "› brew bundle"
+info "Running brew bundle"
 brew bundle
 
 # Install software
-echo "› $DOTFILES/script/install"
 $DOTFILES/script/install

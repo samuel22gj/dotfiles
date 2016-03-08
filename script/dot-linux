@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
+
 set -e
+
+export DOTFILES=$HOME/.dotfiles
+
+# Include customize printf functions
+source $DOTFILES/script/printf
 
 # Check OS
 if [ "$(uname -s)" != "Linux" ]
@@ -7,8 +13,5 @@ then
   exit
 fi
 
-export DOTFILES=$HOME/.dotfiles
-
 # Install software
-echo "› $DOTFILES/script/install"
 $DOTFILES/script/install
