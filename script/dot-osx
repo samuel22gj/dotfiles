@@ -10,7 +10,7 @@ source $DOTFILES/script/printf
 # Check OS
 if [ "$(uname -s)" != "Darwin" ]
 then
-  exit
+  fail "This is for OS X, not $(uname -s)"
 fi
 
 # Set OS X defaults

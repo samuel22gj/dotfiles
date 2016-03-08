@@ -10,7 +10,7 @@ source $DOTFILES/script/printf
 # Check OS
 if [ "$(uname -s)" != "Linux" ]
 then
-  exit
+  fail "This is for Linux, not $(uname -s)"
 fi
 
 # Install software
