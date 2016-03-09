@@ -19,15 +19,8 @@ $DOTFILES/osx/set-defaults.sh
 # Install homebrew
 $DOTFILES/homebrew/install.sh
 
-# Update homebrew
-info "Running brew update"
-brew update
-
-cd "$(dirname $0)"/..
-
-# Run Homebrew through the Brewfile
-info "Running brew bundle"
-brew bundle
+# Run homebrew to install & update packages
+$DOTFILES/script/homebrew
 
 # Install software
 $DOTFILES/script/install
