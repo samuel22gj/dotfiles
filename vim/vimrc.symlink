@@ -1,6 +1,57 @@
-" Enable syntax highlighting
+"  Option Settings
+" =================
 syntax on
+set encoding=utf-8
+set history=999
+set number
+set incsearch
+set hlsearch
+set cursorline
+set smartindent
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set ignorecase
+set backspace=indent,eol,start
 
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
+"  Vundle
+" ========
+set nocompatible " be iMproved, required
+filetype off " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Git
+Plugin 'tpope/vim-fugitive'
+
+" Files
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+
+" Utility
+"Plugin 'scrooloose/syntastic'
+
+" Appearance
+Plugin 'bling/vim-airline'
+
+call vundle#end()
+filetype plugin indent on " required
+
+"  NERD Tree
+" ===========
+map <F2> :NERDTreeToggle<CR>
+
+"  vim-airline
+" =============
+set t_Co=256
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
