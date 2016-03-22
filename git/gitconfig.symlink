@@ -1,42 +1,45 @@
-[hub]
-  protocol = https
+# Reference
+# https://git-scm.com/docs/git-config
+# https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig
+
 [user]
-  name = Amo Wu
-  email = amo260@gmail.com
-[credential]
-  helper = osxkeychain
-[color]
-  diff = auto
-  status = auto
-  branch = auto
-  log = auto
-  ui = true
+    name = samuel22gj
+    email = samuel22gj@gmail.com
+
 [core]
-  excludesfile = ~/.gitignore
-  editor = vim
-[help]
-  autocorrect = 1
-[push]
-  # See `git help config` (search for push.default)
-  # for more information on different options of the below setting.
-  #
-  # Setting to git 2.0 default to surpress warning message
-  default = simple
-[diff]
-  tool = sourcetree
-[difftool]
-  prompt = false
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  trustExitCode = false
+    editor = vim
+    autocrlf = input
+
+    # Use custom `.gitignore` and `.gitattributes`
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
+
 [merge]
-  tool = sourcetree
-[mergetool]
-  keepBackup = false
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
-[filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
-  required = true
+    tool = vimdiff
+
+[color]
+    ui = true
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    cl = clone
+    br = branch
+    slog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+    # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+
+[push]
+    default = simple
+
+[apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+
+[help]
+    # Automatically correct and execute mistyped commands
+    autocorrect = 1
