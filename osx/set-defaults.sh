@@ -433,11 +433,11 @@ defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
-# Top left screen corner → Mission Control
-defaults write com.apple.dock wvous-tl-corner -int 2
+# Top left screen corner → no-op
+defaults write com.apple.dock wvous-tl-corner -int 0
 defaults write com.apple.dock wvous-tl-modifier -int 0
-# Top right screen corner → no-op
-defaults write com.apple.dock wvous-tr-corner -int 0
+# Top right screen corner → Mission Control
+defaults write com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Launchpad
 defaults write com.apple.dock wvous-bl-corner -int 11
