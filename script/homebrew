@@ -46,7 +46,7 @@ brew install dos2unix
 brew install unix2dos
 brew install pidcat
 brew install tldr
-brew install mackup
+#brew install mackup
 
 # Install Homebrew-Cask
 brew tap caskroom/cask
