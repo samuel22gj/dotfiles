@@ -1,5 +1,6 @@
 The MIT License
 
+Copyright (c) Samuel Huang, http://samuel22gj.github.io
 Copyright (c) Zach Holman, http://zachholman.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
