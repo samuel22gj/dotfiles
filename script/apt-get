@@ -53,7 +53,7 @@ chmod 755 ~/bin/pidcat
 
 # Install Git Large File Storage (LFS)
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-$cmd git-lfs
+$cmd install git-lfs
 git lfs install
 
 # Remove useless pacakges and downloaded archive files.
