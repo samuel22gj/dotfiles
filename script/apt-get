@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+set -e
+
+export DOTFILES=$HOME/.dotfiles
+
+# Include customize printf functions
+source $DOTFILES/script/printf
+
+# Check OS
+if [ "$(uname -s)" != "Linux" ]
+then
+  fail "This is for Linux, not $(uname -s)"
+fi
+
+# Ask for the administrator password upfront.
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until the script has finished.
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Alias apt-get without confirm prompt.
+cmd="sudo apt-get -y"
+
+# Update and Upgrade current packages.
+$cmd update
+$cmd upgrade
+
+# Install ack-grep
+sudo add-apt-repository ppa:leonard-ehrenfried/ack2
+$cmd update
+$cmd install -y ack-grep
+# To create a local diversion, renaming ack-grep to ack
+sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
+
+# Install other useful binaries.
+$cmd install zsh
+$cmd install vim
+$cmd install curl
+$cmd install wget
+$cmd install git
+$cmd install git-core
+$cmd install ssh
+$cmd install tree
+$cmd install dos2unix
+$cmd install unix2dos
+$cmd install rar unrar
+$cmd install zip unzip
+
+# Install other useful binaries to ~/bin
+mkdir -p ~/bin
+wget https://raw.githubusercontent.com/JakeWharton/pidcat/master/pidcat.py -O ~/bin/pidcat
+chmod 755 ~/bin/pidcat
+
+# Install Git Large File Storage (LFS)
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+apt-get install git-lfs
+git lfs install
+
+# Remove useless pacakges and downloaded archive files.
+$cmd autoremove
+$cmd autoclean

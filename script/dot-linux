@@ -13,5 +13,8 @@ then
   fail "This is for Linux, not $(uname -s)"
 fi
 
+# Run apt-get to install & update packages
+$DOTFILES/script/apt-get
+
 # Install software
 $DOTFILES/script/install
