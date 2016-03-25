@@ -43,7 +43,6 @@ $cmd install git-core
 $cmd install ssh
 $cmd install tree
 $cmd install dos2unix
-$cmd install unix2dos
 $cmd install rar unrar
 $cmd install zip unzip
 
