@@ -44,7 +44,6 @@ brew install git
 brew install git-lfs
 brew install tree
 brew install dos2unix
-brew install unix2dos
 brew install pidcat
 brew install tldr
 #brew install mackup
