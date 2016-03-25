@@ -13,9 +13,9 @@ source $DOTFILES/script/printf
 
 install_fonts () {
   info "Installing Powerline fonts"
-  git clone https://github.com/powerline/fonts powerline-fonts
-  ./powerline-fonts/install.sh
-  rm -rf powerline-fonts
+  git clone https://github.com/powerline/fonts powerline-fonts-repository
+  ./powerline-fonts-repository/install.sh
+  rm -rf powerline-fonts-repository
 }
 
 if [[ `uname` == 'Darwin' ]]; then
