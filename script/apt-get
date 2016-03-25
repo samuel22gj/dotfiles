@@ -52,9 +52,11 @@ wget https://raw.githubusercontent.com/JakeWharton/pidcat/master/pidcat.py -O ~/
 chmod 755 ~/bin/pidcat
 
 # Install Git Large File Storage (LFS)
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-$cmd install git-lfs
-git lfs install
+if [[ ! $(which git-lfs) ]]; then
+  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+  $cmd install git-lfs
+  git lfs install
+fi
 
 # Remove useless pacakges and downloaded archive files.
 $cmd autoremove
