@@ -20,6 +20,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 info "Installing/Updating packages to latest"
+
 # Alias apt-get without confirm prompt.
 cmd="sudo apt-get -y"
 
