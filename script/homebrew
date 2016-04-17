@@ -68,10 +68,6 @@ brew cask install suspicious-package
 # Install Caskroom-fonts
 brew tap caskroom/fonts
 brew cask install font-noto-sans
-brew cask install font-noto-sans-japanese
-brew cask install font-noto-sans-korean
-brew cask install font-noto-sans-s-chinese
-brew cask install font-noto-sans-t-chinese
 brew cask install font-roboto
 brew cask install font-source-code-pro
 
