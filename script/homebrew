@@ -46,7 +46,7 @@ brew install git-lfs
 brew install tree
 brew install dos2unix
 brew install pidcat
-brew install tldr
+#brew install tldr
 #brew install mackup
 
 # Install Homebrew-Cask
