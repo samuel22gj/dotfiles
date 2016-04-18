@@ -16,5 +16,6 @@ if [ ! -d ~/.oh-my-zsh ]
 then
   info "Installing oh-my-zsh"
   sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  command -v zsh | sudo tee -a /etc/shells
   sudo chsh $USER -s $(which zsh)
 fi
