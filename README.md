@@ -5,8 +5,8 @@ Your dotfiles are how you personalize your system. These are mine.
 ## Install
 
 ```sh
-$ git clone https://github.com/samuel22gj/dotfiles.git ~/.dotfiles
-$ cd ~/.dotfiles
+$ git clone https://github.com/samuel22gj/dotfiles.git ~/dotfiles
+$ cd ~/dotfiles
 $ ./script/bootstrap
 ```
 

@@ -7,7 +7,7 @@
 
 set -e
 
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/dotfiles
 
 # Include customize printf functions
 source $DOTFILES/script/printf
