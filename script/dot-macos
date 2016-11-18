@@ -14,7 +14,7 @@ then
 fi
 
 # Set OS X defaults
-$DOTFILES/osx/set-defaults.sh
+$DOTFILES/macos/set-defaults.sh
 
 # Install homebrew
 $DOTFILES/homebrew/install.sh

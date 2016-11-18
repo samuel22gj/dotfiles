@@ -11,7 +11,7 @@ export DOTFILES=$HOME/dotfiles
 
 if [ "$(uname -s)" == "Darwin" ]
 then
-  source $DOTFILES/script/dot-osx
+  source $DOTFILES/script/dot-macos
 elif [ "$(uname -s)" == "Linux" ]
 then
   source $DOTFILES/script/dot-linux
