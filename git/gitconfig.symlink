@@ -26,6 +26,9 @@
     st = status
     cl = clone
     br = branch
+    cp = cherry-pick
+    unstage = reset HEAD
+    discard = checkout --
     slog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
     # Show verbose output about tags, branches or remotes
