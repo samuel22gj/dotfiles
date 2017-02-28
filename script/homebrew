@@ -45,6 +45,8 @@ brew install wget --with-iri # with IRI support
 brew install ack
 brew install git
 brew install git-lfs
+brew install mercurial
+brew install bazaar
 brew install tree
 brew install dos2unix
 brew install pidcat
