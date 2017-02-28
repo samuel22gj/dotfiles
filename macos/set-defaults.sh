@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+export DOTFILES=$HOME/dotfiles
+
+# Include customize printf functions
+source $DOTFILES/script/printf
+
 # The original idea (and a couple settings) were grabbed from:
 #   https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 
@@ -8,6 +13,8 @@ sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+info "Updating macOS System Preferences"
 
 ###############################################################################
 # General UI/UX                                                               #
