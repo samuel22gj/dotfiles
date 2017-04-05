@@ -41,6 +41,6 @@ There's a few special files in the hierarchy.
 
 ## Thanks
 
-Inspired by [Zach Holman](http://github.com/holman)'s excellent [dotfiles](http://github.com/holman/dotfiles).
-Inspired by [ZAmo Wu](http://github.com/holman)'s excellent [dotfiles](https://github.com/amowu/dotfiles).
-Inspired by [Mathias Bynens](http://github.com/holman)'s excellent [dotfiles](https://github.com/mathiasbynens/dotfiles).
+- Inspired by [Zach Holman](http://github.com/holman)'s excellent [dotfiles](http://github.com/holman/dotfiles).
+- Inspired by [ZAmo Wu](http://github.com/holman)'s excellent [dotfiles](https://github.com/amowu/dotfiles).
+- Inspired by [Mathias Bynens](http://github.com/holman)'s excellent [dotfiles](https://github.com/mathiasbynens/dotfiles).
