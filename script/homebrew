@@ -40,6 +40,7 @@ brew install vim --override-system-vi
 
 # Install other useful binaries.
 brew install zsh
+brew install zsh-autosuggestions
 brew install zsh-completions
 brew install curl
 brew install wget --with-iri # with IRI support
