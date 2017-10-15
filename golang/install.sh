@@ -16,13 +16,14 @@ if [ ! -x "$(command -v go)" ]; then
 
   if [[ `uname` == 'Darwin' ]]; then
     # MacOS
-    brew install go --cross-compile-common
+    brew install go
   else
     # Linux
     sudo apt-get install golang-go
   fi
 
   # Create the workspace directories tree.
+  GOPATH=$HOME/golang
   mkdir -p $GOPATH $GOPATH/src $GOPATH/pkg $GOPATH/bin
   mkdir -p $GOPATH/src/github.com/samuel22gj
 fi
