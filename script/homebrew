@@ -55,11 +55,6 @@ brew install pidcat
 #brew install tldr
 #brew install mackup
 
-# Install Go language
-brew install go --cross-compile-common
-mkdir -p $HOME/golang # This is GOPATH
-mkdir -p $GOPATH/src/github.com/samuel22gj
-
 # Install Homebrew-Cask
 #brew tap caskroom/cask
 #brew cask install google-chrome
