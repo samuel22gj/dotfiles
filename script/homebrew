@@ -30,7 +30,6 @@ brew upgrade
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
 brew install bash
-brew tap homebrew/versions
 brew install bash-completion2
 # Add bash of zsh to /etc/shells
 command -v bash | sudo tee -a /etc/shells
