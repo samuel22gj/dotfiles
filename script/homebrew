@@ -52,6 +52,8 @@ brew install tree
 brew install dos2unix
 brew install pidcat
 brew install tldr
+brew install bat
+brew install fd
 #brew install mackup
 
 # Install Homebrew-Cask
