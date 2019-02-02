@@ -35,7 +35,7 @@ brew install bash-completion2
 command -v bash | sudo tee -a /etc/shells
 
 # Install vim and override sustem vi.
-brew install vim --override-system-vi
+brew install vim --with-override-system-vi
 
 # Install other useful binaries.
 brew install zsh
