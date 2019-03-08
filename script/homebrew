@@ -40,7 +40,7 @@ brew install zsh
 brew install zsh-autosuggestions
 brew install zsh-completions
 brew install curl
-brew install wget --with-iri # with IRI support
+brew install wget
 brew install ack
 brew install git
 brew install git-lfs
