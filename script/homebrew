@@ -34,10 +34,8 @@ brew install bash-completion2
 # Add bash of zsh to /etc/shells
 command -v bash | sudo tee -a /etc/shells
 
-# Install vim and override sustem vi.
-brew install vim --with-override-system-vi
-
 # Install other useful binaries.
+brew install vim
 brew install zsh
 brew install zsh-autosuggestions
 brew install zsh-completions
