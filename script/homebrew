@@ -55,6 +55,7 @@ brew install fd
 #brew install mackup
 
 # Install Homebrew-Cask
+# https://github.com/Homebrew/homebrew-cask
 #brew tap caskroom/cask
 #brew cask install google-chrome
 
@@ -74,8 +75,9 @@ brew cask install provisionql
 brew cask install quicklookapk
 brew cask install qlprettypatch
 
-# Install Caskroom-fonts
-brew tap caskroom/fonts
+# Install Homebrew-Cask-Fonts
+# https://github.com/Homebrew/homebrew-cask-fonts
+brew tap homebrew/cask-fonts
 brew cask install font-noto-sans
 brew cask install font-roboto
 brew cask install font-source-code-pro
