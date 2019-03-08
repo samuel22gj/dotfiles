@@ -27,6 +27,7 @@
     st = status
     cl = clone
     br = branch
+    re = remote
     cp = cherry-pick
     unstage = reset HEAD
     discard = checkout --
@@ -34,8 +35,9 @@
 
     # Show verbose output about tags, branches or remotes
     tags = tag -l
-    branches = branch -a
-    remotes = remote -v
+    brv = branch -vv
+    bra = branch -a -vv
+    rev = remote -v
 
 [push]
     default = simple
