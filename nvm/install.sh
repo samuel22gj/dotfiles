@@ -12,7 +12,7 @@ export DOTFILES=$HOME/dotfiles
 # Include customize printf functions
 source $DOTFILES/script/printf
 
-if [ ! -x "$(command -v nvm)" ]; then
+if [ ! -d ~/.nvm ]; then
   info "Installing NVM"
 
   if [[ `uname` == 'Darwin' ]]; then
