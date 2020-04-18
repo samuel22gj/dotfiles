@@ -6,7 +6,7 @@ export DOTFILES=$HOME/dotfiles
 source $DOTFILES/script/printf
 
 # The original idea (and a couple settings) were grabbed from:
-#   https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+#   https://github.com/mathiasbynens/dotfiles
 
 # Ask for the administrator password upfront
 sudo -v
@@ -172,6 +172,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Trackpad: enable three finger drag
 defaults -currentHost write NSGlobalDomain com.apple.trackpad.threeFingerDragGesture -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
 
 # Trackpad/Mouse: tracking speed fast
 defaults write NSGlobalDomain com.apple.trackpad.scaling -int 3
