@@ -48,3 +48,6 @@ then
 
   unset config_files
 fi
+
+# YubiKey
+export SSH_AUTH_SOCK=/Users/samuelhuang/.yubiagent/sock
