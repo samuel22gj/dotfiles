@@ -3,8 +3,8 @@
 # https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig
 
 [user]
-    name = samuel22gj
-    email = samuel22gj@gmail.com
+    name = samuelhuang
+    email = samuelhuang@verizonmedia.com
 
 [core]
     editor = vim
