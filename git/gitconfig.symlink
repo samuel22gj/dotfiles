@@ -30,7 +30,8 @@
     re = remote
     cp = cherry-pick
     unstage = reset HEAD
-    discard = checkout --
+    discard = checkout .
+    remove = clean -df
     slog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     alias = config --get-regexp ^alias\\.
 
