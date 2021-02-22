@@ -72,8 +72,8 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git z)
 
-# Set DEFAULT_USER to hide the “user@hostname” info when logged in as myself.
-DEFAULT_USER="samuelhuang"
+# Set DEFAULT_USER to hide the “user@hostname” info.
+DEFAULT_USER="$(whoami)"
 
 # Uncomment the following line if you want to skip the verification of insecure directories.
 # ZSH_DISABLE_COMPFIX="true"

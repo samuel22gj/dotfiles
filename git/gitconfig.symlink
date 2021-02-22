@@ -11,7 +11,7 @@
     autocrlf = input
 
     # Use custom `.gitignore` and `.gitattributes`
-    excludesfile = ~/.gitignore
+	excludesfile = /Users/shengsianghuang/.gitignore
     attributesfile = ~/.gitattributes
 
 [merge]
@@ -57,3 +57,9 @@
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
     process = git-lfs filter-process
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
