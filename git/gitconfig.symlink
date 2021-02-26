@@ -36,7 +36,7 @@
     alias = config --get-regexp ^alias\\.
 
     # Show verbose output about tags, branches or remotes
-    tags = tag -l
+    tags = tag -n99
     brv = branch -vv
     bra = branch -a -vv
     rev = remote -v
