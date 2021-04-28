@@ -53,6 +53,7 @@ brew install tldr
 brew install bat
 brew install fd
 brew install scrcpy
+brew install ngrok
 brew install samuel22gj/repo/tldt
 
 # Install Homebrew-Cask
