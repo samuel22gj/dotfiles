@@ -40,7 +40,7 @@ brew install zsh
 brew install zsh-autosuggestions
 brew install curl
 brew install wget
-brew install ack
+brew install ack # alternative of grep
 brew install git
 brew install git-lfs
 brew install svn
@@ -48,15 +48,15 @@ brew install mercurial
 brew install bazaar
 brew install tree
 brew install dos2unix
-brew install pidcat
+brew install pidcat # alternative of logcat
 brew install tldr
-brew install bat
-brew install fd
+brew install bat # alternative of cat
+brew install fd # alternative of find
 brew install scrcpy
 brew install ngrok
-brew install htop
+brew install htop # alternative of top
 brew install samuel22gj/repo/tldt
-brew install exa
+brew install exa # alternative of ls
 
 # Install Homebrew-Cask
 # https://github.com/Homebrew/homebrew-cask
