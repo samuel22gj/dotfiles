@@ -12,7 +12,7 @@ export DOTFILES=$HOME/dotfiles
 source $DOTFILES/script/printf
 
 if [ ! -d ~/.nvm ]; then
-  info "Installing NVM"
+  info "Installing Ruby"
 
   if [[ `uname` == 'Darwin' ]]; then
     # MacOS
