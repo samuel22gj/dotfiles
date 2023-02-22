@@ -44,6 +44,7 @@ $cmd install git
 $cmd install git-core
 $cmd install ssh
 $cmd install tree
+$cmd install ripgrep
 $cmd install dos2unix
 $cmd install rar unrar
 $cmd install zip unzip
