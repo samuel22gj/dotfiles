@@ -3,20 +3,38 @@
 syntax on
 set encoding=utf-8
 set history=999
+set scrolloff=3
+set backspace=indent,eol,start
+set mouse=a
+set clipboard=unnamed
+
+" Appearance
 set number
+set cursorline
 set ruler
+set showcmd
+
+" Search
 set incsearch
 set hlsearch
-set cursorline
+set ignorecase
+set smartcase
+
+" Indent
 set smartindent
 set autoindent
-set tabstop=4
+
+" Tab
+set tabstop=4 
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-set ignorecase
-set backspace=indent,eol,start
-set mouse=a
+
+" Window
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 "  Vundle
 " ========
@@ -32,16 +50,14 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Git
-Plugin 'tpope/vim-fugitive'
-
 " Files
-Plugin 'preservim/nerdtree' " default hotkey is CTRL+n
+Plugin 'preservim/nerdtree'  " hotkey is CTRL+n
+Plugin 'ctrlpvim/ctrlp.vim'  " hotkey is CTRL+p
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
 
 " Utility
-"Plugin 'scrooloose/syntastic'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'dense-analysis/ale'
 
 " Appearance
 Plugin 'bling/vim-airline'
@@ -51,31 +67,32 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 "  NERD Tree
 " ===========
-map <F2> :NERDTreeToggle<CR>
+noremap <F2> :NERDTreeToggle<CR>
+"let NERDTreeMinimalUI = 1
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+"  ctrlp.vim
+" ===========
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+"set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 "  vim-airline
 " =============
 set t_Co=256
 set laststatus=2
+set noshowmode
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-
-"  Window Navigation
-" ===================
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline_powerline_fonts = 1
