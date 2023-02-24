@@ -1,6 +1,7 @@
 "  Option Settings
 " =================
 syntax on
+set nocompatible
 set encoding=utf-8
 set history=999
 set scrolloff=3
@@ -36,37 +37,23 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-"  Vundle
-" ========
-set nocompatible " be iMproved, required
-filetype off     " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+"  vim-plug
+" ==========
+call plug#begin()
 
 " Files
-Plugin 'preservim/nerdtree'  " hotkey is CTRL+n
-Plugin 'ctrlpvim/ctrlp.vim'  " hotkey is CTRL+p
-Plugin 'mileszs/ack.vim'
+Plug 'preservim/nerdtree'  " hotkey is CTRL+n
+Plug 'ctrlpvim/ctrlp.vim'  " hotkey is CTRL+p
+Plug 'mileszs/ack.vim'
 
 " Utility
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'dense-analysis/ale'
+"Plug 'tpope/vim-fugitive'
+"Plug 'dense-analysis/ale'
 
 " Appearance
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
+call plug#end()
 
 "  NERD Tree
 " ===========
