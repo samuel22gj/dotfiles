@@ -12,10 +12,10 @@ export DOTFILES=$HOME/dotfiles
 source $DOTFILES/script/printf
 
 # Check for Vundle
-if [ ! -d ~/.vim/bundle ]
+if [ ! -f ~/.vim/autoload/plug.vim ]
 then
-  info "Installing Vundle"
-  mkdir -p ~/.vim/bundle
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  vim +PluginInstall +qall
+  info "Installing vim-plug"
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  vim +PlugInstall +qall
 fi
