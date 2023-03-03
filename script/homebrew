@@ -61,6 +61,7 @@ brew install exa # alternative of ls
 brew install procs # alternative of ps
 brew install sd # alternative of sed
 brew install dust # alternative of du
+brew install tmux # alternative of screen
 
 # Install Homebrew-Cask
 # https://github.com/Homebrew/homebrew-cask
