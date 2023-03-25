@@ -76,13 +76,11 @@ brew install quicklook-json
 brew install quicklook-csv
 brew install betterzip
 brew install qlimagesize
-brew install webpquicklook
 brew install suspicious-package
 brew install quicklookase
 brew install qlvideo
 brew install provisionql
 brew install quicklookapk
-brew install qlprettypatch
 
 # Install Homebrew-Cask-Fonts
 # https://github.com/Homebrew/homebrew-cask-fonts
