@@ -50,6 +50,9 @@ $cmd install rar unrar
 $cmd install zip unzip
 $cmd install tmux
 
+# Install fonts.
+$cmd install fonts-powerline
+
 # Install other useful binaries to ~/bin
 mkdir -p ~/bin
 wget https://raw.githubusercontent.com/JakeWharton/pidcat/master/pidcat.py -O ~/bin/pidcat

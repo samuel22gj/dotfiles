@@ -90,6 +90,10 @@ brew tap homebrew/cask-fonts
 brew install font-noto-sans
 brew install font-roboto
 brew install font-source-code-pro
+brew install font-noto-mono-for-powerline.rb
+brew install font-menlo-for-powerline
+brew install font-roboto-mono-for-powerline
+brew install font-source-code-pro-for-powerline
 
 # Remove outdated versions from the cellar.
 brew cleanup
