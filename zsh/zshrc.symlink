@@ -73,6 +73,7 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
   git
   zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 # Set DEFAULT_USER to hide the “user@hostname” info.

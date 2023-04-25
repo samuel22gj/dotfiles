@@ -37,7 +37,6 @@ command -v bash | sudo tee -a /etc/shells
 # Install other useful binaries.
 brew install vim
 brew install zsh
-brew install zsh-autosuggestions
 brew install curl
 brew install wget
 brew install ack # alternative of grep
