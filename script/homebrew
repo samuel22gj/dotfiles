@@ -91,6 +91,7 @@ brew install font-noto-mono-for-powerline
 brew install font-menlo-for-powerline
 brew install font-roboto-mono-for-powerline
 brew install font-source-code-pro-for-powerline
+brew install font-hack-nerd-font
 
 # Remove outdated versions from the cellar.
 brew cleanup
