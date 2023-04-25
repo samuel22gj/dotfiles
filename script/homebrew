@@ -53,6 +53,7 @@ brew install procs # alternative of ps
 brew install sd # alternative of sed
 brew install dust # alternative of du
 brew install tmux # alternative of screen
+brew install zoxide # alternative of cd
 brew install tldr
 brew install samuel22gj/repo/tldt
 
