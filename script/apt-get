@@ -35,20 +35,35 @@ $cmd install ack-grep
 # To create a local diversion, renaming ack-grep to ack
 sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 
-# Install other useful binaries.
-$cmd install zsh
+# Install general binaries.
 $cmd install vim
+$cmd install zsh
 $cmd install curl
 $cmd install wget
 $cmd install git
-$cmd install git-core
+$cmd install git-lfs
 $cmd install ssh
 $cmd install tree
-$cmd install ripgrep
 $cmd install dos2unix
 $cmd install rar unrar
 $cmd install zip unzip
-$cmd install tmux
+$cmd install ack # alternative of grep
+$cmd install ripgrep # alternative of grep
+$cmd install bat # alternative of cat
+$cmd install fd-find # alternative of find
+$cmd install htop # alternative of top
+$cmd install exa # alternative of ls
+#$cmd install procs # alternative of ps
+$cmd install sd # alternative of sed
+#$cmd install dust # alternative of du
+$cmd install tmux # alternative of screen
+$cmd install zoxide # alternative of cd
+$cmd install tldr
+
+# Install development binaries.
+$cmd install pidcat # alternative of logcat
+$cmd install scrcpy
+$cmd install ngrok
 
 # Install fonts.
 $cmd install fonts-powerline
