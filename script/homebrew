@@ -27,39 +27,39 @@ brew update
 brew upgrade
 
 # Install Bash 4.
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
-# running `chsh`.
+# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
 brew install bash
 brew install bash-completion@2
-# Add bash of zsh to /etc/shells
 command -v bash | sudo tee -a /etc/shells
 
-# Install other useful binaries.
+# Install general binaries.
 brew install vim
 brew install zsh
 brew install curl
 brew install wget
-brew install ack # alternative of grep
-brew install ripgrep # alternative of grep
 brew install git
 brew install git-lfs
-brew install svn
-brew install mercurial
+#brew install svn
+#brew install mercurial
 brew install tree
 brew install dos2unix
-brew install pidcat # alternative of logcat
-brew install tldr
+brew install ack # alternative of grep
+brew install ripgrep # alternative of grep
 brew install bat # alternative of cat
 brew install fd # alternative of find
-brew install scrcpy
-brew install ngrok
 brew install htop # alternative of top
-brew install samuel22gj/repo/tldt
 brew install exa # alternative of ls
 brew install procs # alternative of ps
 brew install sd # alternative of sed
 brew install dust # alternative of du
 brew install tmux # alternative of screen
+brew install tldr
+brew install samuel22gj/repo/tldt
+
+# Install development binaries.
+brew install pidcat # alternative of logcat
+brew install scrcpy
+brew install ngrok
 
 # Install Homebrew-Cask
 # https://github.com/Homebrew/homebrew-cask
