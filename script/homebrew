@@ -64,7 +64,7 @@ brew install ngrok
 
 # Install Homebrew-Cask
 # https://github.com/Homebrew/homebrew-cask
-brew tap homebrew/cask
+#brew tap homebrew/cask
 #brew cask install google-chrome
 
 # Install Quick Look plugins
