@@ -62,11 +62,6 @@ brew install pidcat # alternative of logcat
 brew install scrcpy
 brew install ngrok
 
-# Install Homebrew-Cask
-# https://github.com/Homebrew/homebrew-cask
-#brew tap homebrew/cask
-#brew cask install google-chrome
-
 # Install Quick Look plugins
 brew install qlcolorcode
 brew install qlstephen
@@ -81,17 +76,15 @@ brew install qlvideo
 brew install provisionql
 brew install quicklookapk
 
-# Install Homebrew-Cask-Fonts
-# https://github.com/Homebrew/homebrew-cask-fonts
-brew tap homebrew/cask-fonts
-brew install font-noto-sans
-brew install font-roboto
-brew install font-source-code-pro
-brew install font-noto-mono-for-powerline
-brew install font-menlo-for-powerline
-brew install font-roboto-mono-for-powerline
-brew install font-source-code-pro-for-powerline
-brew install font-hack-nerd-font
+# Install fonts
+brew install --cask font-noto-sans
+brew install --cask font-roboto
+brew install --cask font-source-code-pro
+brew install --cask font-noto-mono-for-powerline
+brew install --cask font-menlo-for-powerline
+brew install --cask font-roboto-mono-for-powerline
+brew install --cask font-source-code-pro-for-powerline
+brew install --cask font-hack-nerd-font
 
 # Remove outdated versions from the cellar.
 brew cleanup
