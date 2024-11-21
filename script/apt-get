@@ -52,7 +52,7 @@ $cmd install ripgrep # alternative of grep
 $cmd install bat # alternative of cat
 $cmd install fd-find # alternative of find
 $cmd install htop # alternative of top
-$cmd install exa # alternative of ls
+$cmd install eza # alternative of ls
 #$cmd install procs # alternative of ps
 $cmd install sd # alternative of sed
 #$cmd install dust # alternative of du

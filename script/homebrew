@@ -48,7 +48,7 @@ brew install ripgrep # alternative of grep
 brew install bat # alternative of cat
 brew install fd # alternative of find
 brew install htop # alternative of top
-brew install exa # alternative of ls
+brew install eza # alternative of ls
 brew install procs # alternative of ps
 brew install sd # alternative of sed
 brew install dust # alternative of du
