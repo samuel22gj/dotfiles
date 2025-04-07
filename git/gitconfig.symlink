@@ -1,25 +1,96 @@
 # Reference
 # https://git-scm.com/docs/git-config
 # https://github.com/mathiasbynens/dotfiles/blob/master/.gitconfig
+# https://blog.gitbutler.com/how-git-core-devs-configure-git/
 
+# -----------------------------
+# User identity
+# -----------------------------
 [user]
     name = Samuel Huang
     email = samuel22gj@gmail.com
 
+# -----------------------------
+# Core behavior
+# -----------------------------
 [core]
-    editor = vim
-    autocrlf = input
+    editor = vim                         # Use vim as the default editor
+    excludesfile = ~/.gitignore          # Global .gitignore file
+    attributesfile = ~/.gitattributes    # Global .gitattributes file
 
-    # Use custom `.gitignore` and `.gitattributes`
-	excludesfile = /Users/shengsianghuang/.gitignore
-    attributesfile = ~/.gitattributes
+[init]
+    defaultBranch = main                 # Use 'main' instead of 'master' by default
+
+# -----------------------------
+# UI / Display
+# -----------------------------
+[color]
+    ui = true                            # Always enable colored output
+
+[column]
+    ui = auto                            # Auto-detect column layout (default, optional)
+
+[diff]
+    algorithm = histogram                # Better diff output for code
+    colorMoved = plain                   # Show moved lines in diff
+    mnemonicPrefix = true                # Use mnemonic prefixes in diff headers
+
+[commit]
+    verbose = true                       # Show diff in commit message editor
+
+[branch]
+    sort = -committerdate                # Show recent branches first
+
+[tag]
+    sort = version:refname               # Natural version sorting
+
+# -----------------------------
+# Command behavior
+# -----------------------------
+[push]
+    autoSetupRemote = true               # Automatically set upstream on first push
+
+[fetch]
+    prune = true                         # Automatically remove deleted remote branches
+    pruneTags = true                     # Also prune deleted remote tags
+
+[pull]
+    # rebase = true                      # Uncomment to prefer rebase instead of merge
+
+[rebase]
+    autoSquash = true                    # Auto move fixup/squash commits
+    autoStash = true                     # Stash local changes during rebase
+    updateRefs = true                    # Update branch refs on rebase (default since 2.38)
+
+[rerere]
+    enabled = true                       # Remember resolved conflicts
+    autoupdate = true                    # Auto-update rerere resolutions (default since 2.0)
+
+[apply]
+    whitespace = fix                     # Fix whitespace errors when applying patches
 
 [merge]
-    tool = vimdiff
+    tool = vimdiff                       # Use vimdiff as merge tool
+    # conflictstyle = zdiff3             # Uncomment for improved conflict display
 
-[color]
-    ui = true
+# -----------------------------
+# Help & UX
+# -----------------------------
+[help]
+    autocorrect = prompt                 # Fix minor typos in Git commands
 
+# -----------------------------
+# Git LFS
+# -----------------------------
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+
+# -----------------------------
+# Custom Aliases
+# -----------------------------
 [alias]
     co = checkout
     ci = commit
@@ -32,28 +103,13 @@
     unstage = reset HEAD
     discard = checkout .
     remove = clean -df
-    slog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     alias = config --get-regexp ^alias\\.
 
-    # Show verbose output about tags, branches or remotes
+    # Branch & tag helpers
     tags = tag -n99
     brv = branch -vv
     bra = branch -a -vv
     rev = remote -v
 
-[push]
-    default = simple
-
-[apply]
-    # Detect whitespace errors when applying a patch
-    whitespace = fix
-
-[help]
-    # Automatically correct and execute mistyped commands
-    autocorrect = 1
-
-[filter "lfs"]
-    required = true
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
+    # Beautiful graph log
+    slog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
