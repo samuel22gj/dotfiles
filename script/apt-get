@@ -28,13 +28,6 @@ cmd="sudo apt-get -y"
 $cmd update
 $cmd upgrade
 
-# Install ack-grep
-sudo add-apt-repository -y ppa:leonard-ehrenfried/ack2
-$cmd update
-$cmd install ack-grep
-# To create a local diversion, renaming ack-grep to ack
-sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
-
 # Install general binaries.
 $cmd install vim
 $cmd install zsh
