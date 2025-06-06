@@ -137,3 +137,14 @@ then
 
   unset config_files
 fi
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+#fpath=(/Users/samuelhuang/.docker/completions $fpath)
+#autoload -Uz compinit
+#compinit
+if command -v docker &> /dev/null; then
+  fpath=("$HOME/.docker/completions" $fpath)
+  autoload -Uz compinit
+  compinit -D
+fi
+# End of Docker CLI completions
