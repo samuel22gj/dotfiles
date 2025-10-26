@@ -52,6 +52,7 @@ brew install eza # alternative of ls
 brew install procs # alternative of ps
 brew install sd # alternative of sed
 brew install dust # alternative of du
+brew install duf # alternative of df
 brew install tmux # alternative of screen
 brew install zoxide # alternative of cd
 brew install tldr

@@ -49,6 +49,7 @@ $cmd install eza # alternative of ls
 #$cmd install procs # alternative of ps
 $cmd install sd # alternative of sed
 #$cmd install dust # alternative of du
+#$cmd install duf # alternative of df
 $cmd install tmux # alternative of screen
 $cmd install zoxide # alternative of cd
 $cmd install tldr
